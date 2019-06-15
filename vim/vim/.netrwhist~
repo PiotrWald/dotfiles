@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/piotrwald/Projects/statscore-live-feed/lib'
+let g:netrw_dirhist_2='/Users/piotrwald/Projects/statscore-live-feed'
+let g:netrw_dirhist_3='/Users/piotrwald/Projects/statscore-live-feed/config'
+let g:netrw_dirhist_4='/Users/piotrwald/Projects/2homes-api/app/services/exporters'
+let g:netrw_dirhist_5='/Users/piotrwald/Projects/matchday-api/app/queries'
+let g:netrw_dirhist_6='/Users/piotrwald/Projects/matchday-api/spec/factories'
