@@ -19,6 +19,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 execute pathogen#infect()
@@ -39,6 +40,8 @@ let g:ale_linters = {
 
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='badcat'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 
@@ -69,6 +72,9 @@ endif " has("autocmd")
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
+autocmd VimResized * :wincmd =
+
 nmap 0 ^
 let mapleader = "\<Space>"
 
@@ -77,9 +83,6 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 " Other key mapping
 nmap <leader>vr :sp $MYVIMRC<cr>
@@ -114,7 +117,7 @@ set noswapfile
 set splitright
 " set number relativenumber
 
-colorscheme desert
+colorscheme Tech49
 
 syntax on
 

@@ -1,6 +1,6 @@
 export ZSH="/Users/piotrwald/.oh-my-zsh"
 
-ZSH_THEME="gallois"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -15,29 +15,28 @@ ZSH_THEME="gallois"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  docker 
-  zsh-autosuggestions 
-  aws 
-  colored-man-pages 
-  colorize
-  copydir 
-  copyfile 
-  gitignore
-  heroku
-  history
-  zsh_reload
-  npm
-  node
-  extract
-  autojump
-  osx
+  # docker 
+  # zsh-autosuggestions 
+  # aws 
+  # colored-man-pages 
+  # colorize
+  # copydir 
+  # copyfile 
+  # gitignore
+  # heroku
+  # history
+  # zsh_reload
+  # npm
+  # node
+  # extract
+  # osx
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -62,7 +61,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/antigen/antigen.zsh
 source $HOME/.zshenv
 
-eval "$(rbenv init -)"
 
 # Bring in external plugins using Antigen
 antigen bundle djui/alias-tips
@@ -82,4 +80,10 @@ export PKG_CONFIG_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local
 export LD_LIBRARY_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local/lib"
 export GOPATH=$HOME/go
 export PATH=$PATH:~/bin
-export ASDF_DIR=$(brew --prefix asdf)
+export PATH="/usr/local/bin:$PATH"
+
+autoload -U promptinit; promptinit
+prompt pure
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
