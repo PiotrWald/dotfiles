@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/piotrwald/Projects/matchday-api/app/controllers'
-let g:netrw_dirhist_2='/Users/piotrwald/Projects/matchday-api'
-let g:netrw_dirhist_3='/Users/piotrwald/dotfiles'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/piotrwald/Projects/sportxpert-api/app/services'
+let g:netrw_dirhist_2='/Users/piotrwald/Projects/sportxpert-api/app/services/statscore'
+let g:netrw_dirhist_3='/Users/piotrwald/Projects/sportxpert-api/app/services/statscore/creators'
+let g:netrw_dirhist_4='/Users/piotrwald/Projects/sportxpert-api/spec/factories'
+let g:netrw_dirhist_5='/Users/piotrwald/Projects/sportxpert-api'
+let g:netrw_dirhist_6='/Users/piotrwald/Projects/matchday-api'

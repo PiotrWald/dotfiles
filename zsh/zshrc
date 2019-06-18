@@ -68,7 +68,6 @@ antigen apply
 
 # For a full list of active aliases, run `alias`.
 alias drop_neo="rm -rf /usr/local/Cellar/neo4j/3.5.0/libexec/data/databases/graph.db"
-alias lg="git log --abbrev-commit --pretty=oneline"
 alias pu="git push --force origin HEAD"
 alias re="git reset HEAD~1"
 alias wip="git add . && git commit -m 'WIP'"
@@ -85,5 +84,14 @@ export PATH="/usr/local/bin:$PATH"
 autoload -U promptinit; promptinit
 prompt pure
 
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}
+
+ensure_tmux_is_running
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
