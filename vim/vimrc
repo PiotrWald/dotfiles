@@ -3,7 +3,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -13,7 +12,6 @@ Plug 'slim-template/vim-slim'
 Plug 'w0rp/ale'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-Plug 'Shougo/neocomplete.vim'
 Plug 'eugen0329/vim-esearch'
 Plug 'tpope/vim-eunuch'
 Plug 'elixir-editors/vim-elixir'
@@ -23,6 +21,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'janko/vim-test'
 Plug 'benmills/vimux'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 execute pathogen#infect()
@@ -39,9 +38,9 @@ endif
 
 " Set specific linters
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
-\}
+      \   'javascript': ['eslint'],
+      \   'ruby': ['rubocop'],
+      \}
 
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
@@ -63,10 +62,10 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+    au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
   augroup END
 
 else
@@ -97,7 +96,9 @@ nmap <leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 nmap <leader>co ggVG"*y
 nmap <leader>sc :sp db/schema.rb<cr>
 
-nnoremap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'pry'}<cr>
+nmap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'pry'}<cr>
+nmap <leader>iex :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'iex'}<cr>
+nmap <leader>sl :VtrSendLinesToRunner<cr>
 
 
 nmap j gj
@@ -126,7 +127,7 @@ set noswapfile
 set splitright
 " set number relativenumber
 
-colorscheme Tech49
+colorscheme dracula
 
 syntax on
 
