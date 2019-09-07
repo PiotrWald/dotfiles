@@ -28,7 +28,9 @@ hi Directory ctermfg=144 ctermbg=NONE cterm=NONE guifg=#9ea485 guibg=NONE gui=NO
 hi Folded ctermfg=59 ctermbg=0 cterm=NONE guifg=#3f5459 guibg=#000000 gui=NONE
 
 hi SpellBad ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#ff815c guibg=NONE gui=underline
-hi Normal ctermfg=152 ctermbg=NONE cterm=NONE guifg=#accecb guibg=#000000 gui=NONE
+" hi Normal ctermfg=152 ctermbg=NONE cterm=NONE guifg=#accecb guibg=#000000 gui=NONE
+hi Normal cterm=NONE ctermfg=250 ctermbg=16 gui=NONE guifg=#bcbcbc guibg=#000000
+
 hi Boolean ctermfg=209 ctermbg=NONE cterm=NONE guifg=#ff815c guibg=NONE gui=NONE
 hi Character ctermfg=209 ctermbg=NONE cterm=NONE guifg=#ff815c guibg=NONE gui=NONE
 hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#3f5459 guibg=NONE gui=NONE

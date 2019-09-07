@@ -41,7 +41,7 @@ antigen bundle djui/alias-tips
 antigen apply
 
 # For a full list of active aliases, run `alias`.
-alias drop_neo="rm -rf /usr/local/Cellar/neo4j/3.5.0/libexec/data/databases/graph.db"
+alias drop_neo="rm -rf /usr/local/Cellar/neo4j/3.5.8/libexec/data/databases/graph.db"
 alias pu="git push --force origin HEAD"
 alias re="git reset HEAD~1"
 alias wip="git add . && git commit -m 'WIP'"
@@ -49,6 +49,7 @@ alias subl="~/bin/subl"
 alias p="cd ~/Projects"
 alias dsa="docker stop $(docker ps -aq)"
 alias dda="docker rm $(docker ps -aq)"
+alias goo="cd $GOPATH"
 
 export OPENSSL_ROOT_DIR="/usr/local/opt/openssl"
 export PKG_CONFIG_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local/share/pkgconfig"
