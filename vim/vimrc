@@ -22,6 +22,7 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'janko/vim-test'
 Plug 'benmills/vimux'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'skwp/greplace'
 call plug#end()
 
 execute pathogen#infect()
@@ -127,9 +128,9 @@ set noswapfile
 set splitright
 " set number relativenumber
 
-colorscheme Tech49
-
 syntax on
+
+colorscheme OceanicNext
 
 filetype indent on
 filetype on

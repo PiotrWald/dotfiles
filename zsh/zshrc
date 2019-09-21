@@ -1,4 +1,4 @@
-export ZSH="/Users/piotrwald/.oh-my-zsh"
+export ZSH="/Users/pwald/.oh-my-zsh"
 
 ZSH_THEME=""
 
@@ -32,7 +32,7 @@ if [ -f '/Users/piotrwald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/piotr
 if [ -f '/Users/piotrwald/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/piotrwald/google-cloud-sdk/completion.zsh.inc'; fi
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/antigen/antigen.zsh
+source ~/dotfiles/antigen/antigen.zsh
 source $HOME/.zshenv
 
 
@@ -58,6 +58,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:~/bin
 export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:~/.asdf/installs/elixir/1.9.0/.mix/escripts/
+export PATH=$PATH:~/dotfiles/bin/
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -70,9 +71,20 @@ ensure_tmux_is_running() {
   fi
 }
 
+load_cubiware_env_variables() {
+  # source ~/Projects/dev.env
+  if [ -f ~/workspace/cubi/main/dev.env ]; then
+    set -a allexport
+    . ~/workspace/cubi/main/dev.env
+    set +a allexport
+  fi
+}
+
 ensure_tmux_is_running
+load_cubiware_env_variables
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
