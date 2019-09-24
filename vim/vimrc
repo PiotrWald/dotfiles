@@ -22,7 +22,9 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'janko/vim-test'
 Plug 'benmills/vimux'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'skwp/greplace'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'kyoz/purify', { 'rtp': 'vim' }
 call plug#end()
 
 execute pathogen#infect()
@@ -130,7 +132,9 @@ set splitright
 
 syntax on
 
-colorscheme OceanicNext
+let g:gruvbox_italic=1
+
+colorscheme gruvbox
 
 filetype indent on
 filetype on
