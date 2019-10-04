@@ -4,21 +4,13 @@ ZSH_THEME=""
 
 plugins=(
   git
-  # docker 
-  # zsh-autosuggestions 
-  # aws 
-  # colored-man-pages 
-  # colorize
-  # copydir 
-  # copyfile 
-  # gitignore
-  # heroku
-  # history
-  # zsh_reload
-  # npm
-  # node
-  # extract
-  # osx
+  docker 
+  colored-man-pages 
+  colorize
+  copyfile 
+  history
+  zsh_reload
+  extract
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -48,7 +48,8 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='badcat'
+let g:airline_theme='papercolor'
+" let g:airline_theme='badcat'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 
@@ -96,12 +97,13 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 nmap <leader>vr :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
-nmap <leader>co ggVG"*y
+nmap <leader>co ggVG"*
 nmap <leader>sc :sp db/schema.rb<cr>
 
 nmap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'pry'}<cr>
 nmap <leader>iex :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'iex'}<cr>
 nmap <leader>sl :VtrSendLinesToRunner<cr>
+nmap <leader>bp orequire 'pry'; binding.pry # FIXME <esc>
 
 
 nmap j gj
@@ -121,7 +123,7 @@ set number
 set hlsearch
 set incsearch
 set autoindent
-set background=dark
+set background=light
 set ruler
 set autoread
 set scrolloff=999
@@ -132,9 +134,11 @@ set splitright
 
 syntax on
 
+set t_Co=256
+
 let g:gruvbox_italic=1
 
-colorscheme gruvbox
+colorscheme PaperColor
 
 filetype indent on
 filetype on
