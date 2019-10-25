@@ -25,6 +25,10 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'cocopon/iceberg.vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 execute pathogen#infect()
@@ -53,8 +57,18 @@ let g:airline_theme='papercolor'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+" VimWiki config
+let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
+       \ 'syntax':'markdown', 'ext': '.md' }]
+autocmd FileType vimwiki set ft=markdown
+
+" NerdTree config
+map <C-o> :NERDTreeToggle<CR>
+
+if !has('nvim')
+  " Get the defaults that most users want.
+  source $VIMRUNTIME/defaults.vim
+endif
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -138,7 +152,7 @@ set t_Co=256
 
 let g:gruvbox_italic=1
 
-colorscheme PaperColor
+colorscheme iceberg
 
 filetype indent on
 filetype on

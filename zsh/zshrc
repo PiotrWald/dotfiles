@@ -42,6 +42,7 @@ alias p="cd ~/Projects"
 alias dsa="docker stop $(docker ps -aq)"
 alias dda="docker rm $(docker ps -aq)"
 alias goo="cd $GOPATH"
+alias rspec="bundle exec rspec"
 
 export OPENSSL_ROOT_DIR="/usr/local/opt/openssl"
 export PKG_CONFIG_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local/share/pkgconfig"
