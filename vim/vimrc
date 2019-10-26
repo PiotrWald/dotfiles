@@ -118,6 +118,7 @@ nmap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'pr
 nmap <leader>iex :VtrOpenRunner {'orientation': 'h', 'percentage': 50,'cmd': 'iex'}<cr>
 nmap <leader>sl :VtrSendLinesToRunner<cr>
 nmap <leader>bp orequire 'pry'; binding.pry # FIXME <esc>
+nmap <leader>e :Explore<cr>
 
 
 nmap j gj
@@ -137,7 +138,7 @@ set number
 set hlsearch
 set incsearch
 set autoindent
-set background=light
+set background=dark
 set ruler
 set autoread
 set scrolloff=999
