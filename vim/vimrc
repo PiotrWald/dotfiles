@@ -52,7 +52,8 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='gruvbox'
+" let g:airline_theme='papercolor'
 " let g:airline_theme='badcat'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
@@ -152,8 +153,10 @@ syntax on
 set t_Co=256
 
 let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_contrast_light="hard"
 
-colorscheme iceberg
+colorscheme gruvbox
 
 filetype indent on
 filetype on
