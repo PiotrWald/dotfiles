@@ -35,6 +35,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'ryanoasis/vim-devicons'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 execute pathogen#infect()
@@ -79,6 +81,11 @@ autocmd FileType vimwiki set ft=markdown
 " NerdTree config
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+" Ranger VIM config
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 if !has('nvim')
   " Get the defaults that most users want.
