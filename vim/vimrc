@@ -37,6 +37,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'ryanoasis/vim-devicons'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 execute pathogen#infect()
@@ -72,6 +73,8 @@ let g:ale_set_highlights = 0
 " let g:airline_section_z (column_number)
 let g:airline_section_z = '%3l/%L:%3v'
 " let g:airline_section_e = ''
+
+" :Tmuxline vim_statusline_3
 
 " VimWiki config
 let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
