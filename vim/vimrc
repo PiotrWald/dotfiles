@@ -38,6 +38,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'edkolev/tmuxline.vim'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 execute pathogen#infect()
@@ -81,7 +82,10 @@ let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
        \ 'syntax':'markdown', 'ext': '.md' }]
 autocmd FileType vimwiki set ft=markdown
 
-" NerdTree config
+" AutoSave config
+let g:auto_save = 1 
+
+"NerdTree config
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
