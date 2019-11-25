@@ -39,6 +39,15 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug '907th/vim-auto-save'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 call plug#end()
 
 execute pathogen#infect()
@@ -66,8 +75,7 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
-" let g:airline_theme='papercolor'
+let g:airline_theme='papercolor'
 " let g:airline_theme='badcat'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
@@ -79,7 +87,7 @@ let g:airline_section_z = '%3l/%L:%3v'
 
 " VimWiki config
 let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
-       \ 'syntax':'markdown', 'ext': '.md' }]
+      \ 'syntax':'markdown', 'ext': '.md' }]
 autocmd FileType vimwiki set ft=markdown
 
 " AutoSave config
@@ -93,6 +101,9 @@ let NERDTreeShowHidden=1
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+
+" Deoplete config
+let g:deoplete#enable_at_startup = 1
 
 if !has('nvim')
   " Get the defaults that most users want.
@@ -185,7 +196,7 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark="hard"
 let g:gruvbox_contrast_light="hard"
 
-colorscheme gruvbox
+colorscheme PaperColor
 
 filetype indent on
 filetype on
