@@ -39,6 +39,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug '907th/vim-auto-save'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -81,7 +82,8 @@ let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 " let g:airline_section_z (column_number)
 let g:airline_section_z = '%3l/%L:%3v'
-" let g:airline_section_e = ''
+let g:airline_section_b = ''
+let g:airline_section_y = ''
 
 " :Tmuxline vim_statusline_3
 
