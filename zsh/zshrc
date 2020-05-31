@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 
 export MANPATH="/usr/local/man:$MANPATH"
 
-if [ -f '/Users/piotrwald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/piotrwald/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/pwald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pwald/google-cloud-sdk/path.zsh.inc'; fi
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/antigen/antigen.zsh
@@ -43,14 +43,18 @@ alias goo="cd $GOPATH"
 alias rspec="bundle exec rspec"
 
 export OPENSSL_ROOT_DIR="/usr/local/opt/openssl"
-export PKG_CONFIG_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local/share/pkgconfig"
-export LD_LIBRARY_PATH="/Users/piotrwald/Packages/seabolt-1.7.2-Darwin/usr/local/lib"
+export PKG_CONFIG_PATH="/Users/pwald/Packages/seabolt-1.7.2-Darwin/usr/local/share/pkgconfig"
+export LD_LIBRARY_PATH="/Users/pwald/Packages/seabolt-1.7.2-Darwin/usr/local/lib"
 export GOPATH=$HOME/go
 export PATH=$PATH:~/bin
 export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:~/.asdf/installs/elixir/1.9.0/.mix/escripts/
 export PATH=$PATH:~/dotfiles/bin/
 export ASDF_DIR=$(brew --prefix asdf)
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+export CONFLUENT_HOME=/Users/pwald/confluent-5.4.0
+export PATH="$CONFLUENT_HOME/bin:$PATH"
 
 autoload -U promptinit; promptinit
 prompt pure
