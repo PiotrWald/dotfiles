@@ -157,7 +157,7 @@ nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
 " Other key mapping
-nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>vr :sp ~/.vimrc<cr>
 nmap <leader>vv :sp /Users/pwald/.vimrc/ <cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
