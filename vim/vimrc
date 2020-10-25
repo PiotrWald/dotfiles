@@ -43,6 +43,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'airblade/vim-gitgutter'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'chriskempson/base16-vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -80,8 +82,8 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
-" let g:airline_theme='gruvbox'
+" let g:airline_theme='papercolor'
+let g:airline_theme='gruvbox'
 " let g:airline_theme='badcat'
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
@@ -98,7 +100,7 @@ let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
 autocmd FileType vimwiki set ft=markdown
 
 " AutoSave config
-let g:auto_save = 1 
+let g:auto_save = 1
 
 "NerdTree config
 map <C-o> :NERDTreeToggle<CR>
@@ -161,6 +163,7 @@ nmap <leader>vr :sp ~/.vimrc<cr>
 nmap <leader>vv :sp /Users/pwald/.vimrc/ <cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+nmap <leader>h :new <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 nmap <leader>co ggVG"*
 nmap <leader>sc :sp db/schema.rb<cr>
 
@@ -219,7 +222,7 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark="hard"
 let g:gruvbox_contrast_light="hard"
 
-colorscheme Tech49
+colorscheme PaperColor
 
 filetype indent on
 filetype on
