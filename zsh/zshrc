@@ -4,14 +4,14 @@ ZSH_THEME=""
 
 plugins=(
   git
-  docker 
-  colored-man-pages 
+  docker
+  colored-man-pages
   colorize
   docker-compose
-  copyfile 
+  copyfile
   history
-  zsh_reload
   extract
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -40,7 +40,8 @@ alias p="cd ~/Projects"
 alias dsa="docker stop $(docker ps -aq)"
 alias dda="docker rm $(docker ps -aq)"
 alias goo="cd $GOPATH"
-alias rspec="bundle exec rspec"
+# alias rspec="bundle exec rspec"
+alias v="nvim"
 
 export OPENSSL_ROOT_DIR="/usr/local/opt/openssl"
 export PKG_CONFIG_PATH="/Users/pwald/Packages/seabolt-1.7.2-Darwin/usr/local/share/pkgconfig"
@@ -51,10 +52,18 @@ export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:~/.asdf/installs/elixir/1.9.0/.mix/escripts/
 export PATH=$PATH:~/dotfiles/bin/
 export ASDF_DIR=$(brew --prefix asdf)
+export PATH=$PATH:~/dotfiles/bin
+export PATH=$PATH:~/Husband-Redis/bin
+export PATH=$PATH:~/Library/Python/2.7/bin
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
-export CONFLUENT_HOME=/Users/pwald/confluent-5.4.0
-export PATH="$CONFLUENT_HOME/bin:$PATH"
+
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home/
+export FIRSTRUN_EMAIL=piotr@perrystreet.com
+# export DOCKER_CDN_HOST=22.0.2.2
+export GOOGLE_USERNAME=piotr@perrystreet.com
+export GOOGLE_IDP_ID="C01qfmh5z"
+export GOOGLE_SP_ID="839360498428"
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -80,7 +89,7 @@ ensure_tmux_is_running
 load_cubiware_env_variables
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
@@ -95,4 +104,10 @@ if [ -f '/Users/pw/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pw/google-cl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/pw/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pw/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH=/Users/pwald/.pyenv/versions/3.7.2/bin:$PATH
+export PATH=~/.pyenv/versions/3.7.2/bin:$PATH
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+source .zshrc_non_public

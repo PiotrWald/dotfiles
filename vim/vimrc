@@ -45,16 +45,14 @@ Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chriskempson/base16-vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'hashivim/vim-terraform'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
 endif
-
 call plug#end()
+
 
 execute pathogen#infect()
 set encoding=UTF-8
@@ -81,6 +79,7 @@ let g:ale_linters = {
 
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 1
 " let g:airline_theme='papercolor'
 let g:airline_theme='gruvbox'
@@ -111,10 +110,6 @@ let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
-" Deoplete config
-if has('nvim')
-  let g:deoplete#enable_at_startup = 1
-endif
 
 if !has('nvim')
   " Get the defaults that most users want.
@@ -160,8 +155,9 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 
 " Other key mapping
 nmap <leader>vr :sp ~/.vimrc<cr>
-nmap <leader>vv :sp /Users/pwald/.vimrc/ <cr>
+nmap <leader>vv :sp ~/.vimrc/ <cr>
 nmap <leader>so :source $MYVIMRC<cr>
+
 nmap <leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 nmap <leader>h :new <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 nmap <leader>co ggVG"*
