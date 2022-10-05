@@ -58,8 +58,6 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home/
-export FIRSTRUN_EMAIL=piotr@perrystreet.com
-# export DOCKER_CDN_HOST=22.0.2.2
 export GOOGLE_USERNAME=piotr@perrystreet.com
 export GOOGLE_IDP_ID="C01qfmh5z"
 export GOOGLE_SP_ID="839360498428"
